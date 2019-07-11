@@ -36,6 +36,8 @@ title: Aspect Realty - Properties
             </div>
          </div>
          <div class="row">
+            
+            {% for post in site.posts %}
             <div class="col-md-4 col-lg-4">
                <div class="single_appartment_part">
                   <div class="appartment_img">
@@ -48,8 +50,8 @@ title: Aspect Realty - Properties
                   <div class="single_appartment_content">
                      <a href="" class="love_us"> <span class="ti-heart"></span> </a>
                      <p>Home, Apartment</p>
-                     <a href="#">
-                        <h4>Detached House For Sale</h4>
+                     <a href="{{ post.url }}">
+                        <h4>{{ post.title }}</h4>
                      </a>
                      <ul class="list-unstyled">
                         <li><a href=""><span class="flaticon-bath"></span></a> 04</li>
@@ -59,52 +61,7 @@ title: Aspect Realty - Properties
                   </div>
                </div>
             </div>
-            <div class="col-md-4 col-lg-4">
-               <div class="single_appartment_part">
-                  <div class="appartment_img">
-                     <img src="img/appertment_2.png" alt="">
-                     <div class="single_appartment_text">
-                        <h3>$1,235632</h3>
-                        <p><span class="ti-location-pin"></span> 384 Treeline Park, San Antonio, TX</p>
-                     </div>
-                  </div>
-                  <div class="single_appartment_content">
-                     <a href="" class="love_us"> <span class="ti-heart"></span> </a>
-                     <p>Home, Apartment</p>
-                     <a href="#">
-                        <h4>Detached House For Sale</h4>
-                     </a>
-                     <ul class="list-unstyled">
-                        <li><a href=""><span class="flaticon-bath"></span></a> 04</li>
-                        <li><a href=""><span class="flaticon-bed"></span></a> 03</li>
-                        <li><a href=""><span class="flaticon-frame"></span></a> 2400 sqft</li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="col-md-4 col-lg-4">
-               <div class="single_appartment_part">
-                  <div class="appartment_img">
-                     <img src="img/appertment_3.png" alt="">
-                     <div class="single_appartment_text">
-                        <h3>$1,235632</h3>
-                        <p><span class="ti-location-pin"></span> 384 Treeline Park, San Antonio, TX</p>
-                     </div>
-                  </div>
-                  <div class="single_appartment_content">
-                     <a href="" class="love_us"> <span class="ti-heart"></span> </a>
-                     <p>Home, Apartment</p>
-                     <a href="#">
-                        <h4>Detached House For Sale</h4>
-                     </a>
-                     <ul class="list-unstyled">
-                        <li><a href=""><span class="flaticon-bath"></span></a> 04</li>
-                        <li><a href=""><span class="flaticon-bed"></span></a> 03</li>
-                        <li><a href=""><span class="flaticon-frame"></span></a> 2400 sqft</li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
+            {% endfor %}
          </div>
       </div>
    </div>
