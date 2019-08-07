@@ -1,0 +1,68 @@
+// Styling for the masthead
+header.masthead {
+  text-align: center;
+  color: black;
+  background-image: url('../img/header-bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  .intro-text {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    .intro-heading {
+      font-size: 30px;
+      line-height: 30px;
+      font-weight: 200;
+      margin-bottom: 5px;
+      @include heading-font;
+    }
+    .intro-heading2 {
+      font-size: 25px;
+      line-height: 25px;
+      font-weight: 100;
+      margin-bottom: 25px;
+      @include heading-font;
+    }
+    .intro-lead-in {
+      font-size: 14px;
+      line-height: 14px;
+      font-style: italic;
+      margin-bottom: 25px;
+      @include serif-font;
+    }
+  }
+}
+@media(min-width:768px) {
+  header.masthead {
+    .intro-text {
+      padding-top: 156px;
+      padding-bottom: 170px;
+      .intro-heading {
+        font-size: 65px;
+        line-height: 65px;
+        font-weight: 200;
+        margin-bottom: 50px;
+        @include heading-font;
+      }
+      .intro-heading2 {
+        font-size: 50px;
+        line-height: 50px;
+        font-weight: 100;
+        margin-bottom: 50px;
+        @include heading-font;
+      }
+      .intro-lead-in {
+        font-size: 25px;
+        line-height: 25px;
+        font-style: italic;
+        margin-bottom: 50px;
+        @include serif-font;
+      }
+    }
+  }
+}
+header.masthead.secondary {
+  background-color: $secondary;
+  background-image: none !important;
+}
