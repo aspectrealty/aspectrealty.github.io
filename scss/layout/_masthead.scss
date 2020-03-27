@@ -62,3 +62,7 @@ header.masthead {
     }
   }
 }
+header.masthead.secondary {
+  background-color: $secondary;
+  background-image: none !important;
+}
