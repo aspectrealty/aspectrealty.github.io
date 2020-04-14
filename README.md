@@ -1,6 +1,6 @@
-Aspect Realty
+## Aspect Realty
 
-Static Site Generator
+### Static Site Generator
 
 ## Updating Properties
 
@@ -10,6 +10,7 @@ To add a new property simply copy the contents of an existing property file and 
 
 ex. property.md file:
 
+```
 ---
 address1: 1115 Chambers Ave. Unit B101
 address2: Eagle, CO 81657
@@ -25,6 +26,7 @@ desc: B101 is a new commercial space in the Chambers Lofts mixed use complex in 
 mapurl: https://www.google.com/maps/embed/v1/place?key=AIzaSyBxhIcjBcpDa3pzvGqgMLnSgZDusFYQci4&q=1115+Chambers+Ave,+Eagle,+CO+81631
 gallery: property1
 ---
+```
 
 ## Property Images
 
