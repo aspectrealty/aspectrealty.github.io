@@ -3,10 +3,11 @@
   background-color: $secondary;
   padding: 25px 0;
   text-align: center;
+  color: white;
   h4{
       font-size: 20px;
       margin-bottom: 20px;
-      font-weight: 600;
+      font-weight: 400;
       @media #{$small_mobile}{
           margin-bottom: 15px;
       }

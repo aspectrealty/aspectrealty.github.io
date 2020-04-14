@@ -1,0 +1,31 @@
+.info-wrap .dbox {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.info-wrap .dbox p {
+    margin-bottom: 0;
+}
+
+.info-wrap .dbox .icon {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.info-wrap .dbox .icon span {
+    font-size: 20px;
+}
+
+.info-wrap .dbox p span {
+    font-weight: 600;
+}
+
+.info-wrap .dbox .text {
+    width: calc(100% - 50px);
+}
+
+.info-wrap .dbox p a {
+    color: rgb(0, 0, 0);
+}

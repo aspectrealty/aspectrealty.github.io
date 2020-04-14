@@ -2,55 +2,41 @@
 layout: default
 ---
 
-    <section class="page-section" id="portfolio">
-                <!-- For Lease Content -->
-                <section class="portfolio page-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 text-center">
-                                <h2 class="section-heading">Commercial Listings</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-
-                            {% for property in site.properties %}
-                            <div class="col-md-4 col-sm-6 portfolio-item">
-                                <a class="portfolio-link" href="{{ property.url }}">
-                                    <div class="portfolio-hover">
-                                        <div class="portfolio-hover-content">
-                                            <i class="fas fa-plus fa-3x"></i>
-                                        </div>
-                                    </div>
-
-                                    
-                                {% capture ipath %}{{ property.gallery }}{% endcapture %}
-
-                                {% for image in site.static_files %}
-                                    {% if image.path contains ipath %}
-                                        <img class="img-fluid" src="{{ site.baseurl }}{{ image.path }}" alt="Real Estate Image" />
-                                        {% break %}
-                                    {% endif %}
-                                {% endfor %}
-
-                                    <!-- <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt=""> -->
-                                </a>
-                                <div class="portfolio-caption">
-                                    <h6>FOR LEASE</h4>
-                                        <p>{{ property.address1 }}</p>
-                                        <p>{{ property.address2 }}</p>
-                                        <p>{{ property.sqft }} Sq Ft</p>
-                                        <a href="{{ property.url }}">Click For More Details</a>
-                                        <br />
-                                        <br />
-                                        <p>Contact Jason Fish</p>
-                                </div>
-                            </div>
-                            {% endfor %}
-
-                        </div>
-                    </div>
-                </section>
-                <!-- For Lease Content -->
+<!-- For Lease Content -->
+<section class="portfolio page-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Commercial Listings</h3>
             </div>
         </div>
-    </section>
+        <div class="row">
+            {% for property in site.properties %}
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="card">
+                    <a class="portfolio-link" href="{{ property.url }}">
+                        <div class="portfolio-hover">
+                        </div>
+                        {% capture ipath %}{{ property.gallery }}{% endcapture %}
+
+                        {% for image in site.static_files %}
+                        {% if image.path contains ipath %}
+                        <img class="img-fluid" src="{{ site.baseurl }}{{ image.path }}" alt="Real Estate Image" />
+                        {% break %}
+                        {% endif %}
+                        {% endfor %}
+                    </a>
+                    <div class="portfolio-caption">
+                        <h6>FOR LEASE</h4>
+                            <p>{{ property.address1 }}</p>
+                            <p>{{ property.address2 }}</p>
+                            <p>{{ property.sqft }} Sq Ft</p>
+                            <a href="{{ property.url }}">More Details</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- For Lease Content -->
