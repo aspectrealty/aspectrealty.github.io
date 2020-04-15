@@ -156,10 +156,14 @@ img::-moz-selection {
 
 @media (min-width: 992px) {
   #mainNav {
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
     background-color: none;
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
     padding: 1.1em 1em !important;
