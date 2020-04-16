@@ -453,6 +453,10 @@ header.masthead.secondary {
   margin-top: 0;
 }
 
+.team-member p a {
+  color: black;
+}
+
 .info-wrap .dbox {
   width: 100%;
   margin-bottom: 25px;
@@ -524,4 +528,8 @@ header.masthead.secondary {
 .footer a img {
   height: 50px;
   margin-bottom: 20px;
+}
+
+.footer p a {
+  color: white;
 }

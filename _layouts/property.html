@@ -6,12 +6,12 @@ layout: default
     <div class="container">
         <div class="row">
             <div class="col-12">
-
                 <div class="mb-3">
                     <h1>{{ page.address1 }}</h1>
                     <p class="text-uppercase">{{ page.shortdesc }}</h3>
                 </div>
-
+            </div>
+            <div class="col-12 col-lg-6 mb-2">
                 <!-- Image Slider -->
                 <div class="mb-4">
                     <div class="slide-one-item home-slider owl-carousel">
@@ -26,27 +26,33 @@ layout: default
 
                     </div>
                 </div>
-
-                <!-- Property Info -->
-                <div class="row mb-5">
-                    <div class="col-sm-6">
+            </div>
+            <div class="col-12 col-lg-6 mb-2">
+                <h3 class="text-black">Description</h3>
+                <p>{{ page.desc }}</p>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="row">
+                    <!-- Property Info -->
+                    <div class="col-6 col-md-3">
                         <h6 class="text-black">Sq Ft</h6>
                         <p>{{ page.sqft }} Sq Ft</p>
+                    </div>
+                    <div class="col-6 col-md-3">
                         <h6 class="text-black">Price</h6>
                         <p>{{ page.price }}</p>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-6 col-md-3">
                         <h6 class="text-black">Term</h6>
                         <p>{{ page.term }}</p>
+                    </div>
+                    <div class="col-6 col-md-3">
                         <h6 class="text-black">CAM & RE Tax</h6>
                         <p>{{ page.camretax }}</p>
                     </div>
-                    <div class="col-12">
-                        <h3 class="text-black">Description</h3>
-                        <p>{{ page.desc }}</p>
-                    </div>
                 </div>
-
+            </div>
+            <div class="col-12">
                 <!-- Google Map -->
                 <iframe width="100%" height="400" frameborder="0" style="border:0" src="{{ page.mapurl }}"
                     allowfullscreen>
@@ -57,10 +63,11 @@ layout: default
             <div class="col-sm-4">
                 <div class="team-member mb-0">
                     <h3 class="text-black mb-4">Contact Broker</h3>
-                    <img src="{{ base.url | prepend: site.url }}/img/headshot.jpg" alt="Broker Headshot" class="img-fluid rounded-circle">
+                    <img src="{{ base.url | prepend: site.url }}/img/headshot.jpg" alt="Broker Headshot"
+                        class="img-fluid rounded-circle">
                     <h4>Jason Fish</h4>
-                    <p class="text-muted">970-300-1415</p>
-                    <p class="text-muted">jfish@aspectrealtyco.com</p>
+                    <p class="text-muted mt-1"><a href="tel://9708290577">(970) 829-0577</a></p>
+                    <p class="text-muted"><a href="mailto:jfish@aspectrealtyco.com">jfish@aspectrealtyco.com</a></p>
                 </div>
             </div>
         </div>
