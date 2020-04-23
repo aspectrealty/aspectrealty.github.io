@@ -39,6 +39,22 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
+  // Property Filter
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("portfolio-item");
+    if (c == "all") c = "";
+    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+    for (i = 0; i < x.length; i++) {
+      if(x.classList.contains(c)) {
+        x.classList.addClass("show");
+      }
+      else {
+        x.classList.addClass("hide");
+      }
+    }
+  }
+
   $('.image-popup').magnificPopup({
     type: 'image',
     closeOnContentClick: true,

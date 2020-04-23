@@ -27,6 +27,15 @@ h6 {
   @include heading-font;
 }
 
+.nav-pills .nav-link {
+  color: #535353;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #535353 !important;
+}
+
 .page-section {
   padding: 100px  0;
   h2.section-heading {

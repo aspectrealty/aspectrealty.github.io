@@ -10,32 +10,86 @@ layout: default
                 <h2 class="section-heading">Listings</h3>
             </div>
         </div>
-        <div class="row">
-            {% for property in site.properties %}
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <div class="card">
-                    <a class="portfolio-link" href="{{ property.url }}">
-                        <div class="portfolio-hover">
-                        </div>
-                        {% capture ipath %}{{ property.gallery }}{% endcapture %}
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-commercial-tab" data-toggle="pill" href="#pills-commercial"
+                    role="tab" aria-controls="pills-commercial" aria-selected="true">Commercial</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-residential-tab" data-toggle="pill" href="#pills-residential" role="tab"
+                    aria-controls="pills-residential" aria-selected="false">Residential</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-commercial" role="tabpanel"
+                aria-labelledby="pills-commercial-tab">
+                <div class="row">
 
-                        {% for image in site.static_files %}
-                        {% if image.path contains ipath %}
-                        <img class="img-fluid" src="{{ site.baseurl }}{{ image.path }}" alt="Real Estate Image" />
-                        {% break %}
-                        {% endif %}
-                        {% endfor %}
-                    </a>
-                    <div class="portfolio-caption">
-                        <h6>FOR LEASE</h4>
-                            <p>{{ property.address1 }}</p>
-                            <p>{{ property.address2 }}</p>
-                            <p>{{ property.sqft }} Sq Ft</p>
-                            <a href="{{ property.url }}">More Details</a>
+                    {% for property in site.properties %}
+                    {% if property.iscommercial %}
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <div class="card">
+                            <a class="portfolio-link" href="{{ property.url }}">
+                                <div class="portfolio-hover">
+                                </div>
+                                {% capture ipath %}{{ property.gallery }}{% endcapture %}
+
+                                {% for image in site.static_files %}
+                                {% if image.path contains ipath %}
+                                <img class="img-fluid" src="{{ site.baseurl }}{{ image.path }}"
+                                    alt="Real Estate Image" />
+                                {% break %}
+                                {% endif %}
+                                {% endfor %}
+                            </a>
+                            <div class="portfolio-caption">
+                                <h6>FOR LEASE</h4>
+                                    <p>{{ property.address1 }}</p>
+                                    <p>{{ property.address2 }}</p>
+                                    <p>{{ property.sqft }} Sq Ft</p>
+                                    <a href="{{ property.url }}">More Details</a>
+                            </div>
+                        </div>
                     </div>
+                    {% endif %}
+                    {% endfor %}
+
                 </div>
             </div>
-            {% endfor %}
+            <div class="tab-pane fade" id="pills-residential" role="tabpanel" aria-labelledby="pills-residential-tab">
+                <div class="row">
+
+                    {% for property in site.properties %}
+                    {% if property.iscommercial == false %}
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <div class="card">
+                            <a class="portfolio-link" href="{{ property.url }}">
+                                <div class="portfolio-hover">
+                                </div>
+                                {% capture ipath %}{{ property.gallery }}{% endcapture %}
+
+                                {% for image in site.static_files %}
+                                {% if image.path contains ipath %}
+                                <img class="img-fluid" src="{{ site.baseurl }}{{ image.path }}"
+                                    alt="Real Estate Image" />
+                                {% break %}
+                                {% endif %}
+                                {% endfor %}
+                            </a>
+                            <div class="portfolio-caption">
+                                <h6>FOR LEASE</h4>
+                                    <p>{{ property.address1 }}</p>
+                                    <p>{{ property.address2 }}</p>
+                                    <p>{{ property.sqft }} Sq Ft</p>
+                                    <a href="{{ property.url }}">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+            </div>
         </div>
     </div>
 </section>

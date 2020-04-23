@@ -1,5 +1,5 @@
 ---
-iscommercial: true
+iscommercial: false
 address1: 1115 Chambers Ave Unit C104
 address2: Eagle, CO 81657
 sqft: 1200
