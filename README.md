@@ -29,6 +29,10 @@ gallery: property1
 ---
 ```
 
+## Map URL
+
+Look up the address on [Google Maps](https://www.google.com/maps).  In the row of blue circle buttons click the Share button.  In the popup go to the 'Embed a map' tab and copy the URL from the iframe src.
+
 ## Property Images
 
 Each property's gallery is mapped to a directory named in the markdown file.  The property page will look for a folder with the name used in the 'gallery' field in the [assets/images](https://github.com/aspectrealty/aspectrealty.github.io/tree/master/assets/images) directory.

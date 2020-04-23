@@ -1,5 +1,6 @@
 ---
 iscommercial: true
+saletype: for lease
 address1: 1115 Chambers Ave Unit C103
 address2: Eagle, CO 81657
 sqft: 1200

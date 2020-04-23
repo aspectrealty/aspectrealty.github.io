@@ -43,7 +43,7 @@ layout: default
                                 {% endfor %}
                             </a>
                             <div class="portfolio-caption">
-                                <h6>FOR LEASE</h4>
+                                <h6 class="text-uppercase">{{ property.saletype }}</h4>
                                     <p>{{ property.address1 }}</p>
                                     <p>{{ property.address2 }}</p>
                                     <p>{{ property.sqft }} Sq Ft</p>
@@ -77,7 +77,7 @@ layout: default
                                 {% endfor %}
                             </a>
                             <div class="portfolio-caption">
-                                <h6>FOR SALE</h4>
+                                <h6 class="text-uppercase">{{ property.saletype }}</h4>
                                     <p>{{ property.address1 }}</p>
                                     <p>{{ property.address2 }}</p>
                                     <p>{{ property.sqft }} Sq Ft</p>
