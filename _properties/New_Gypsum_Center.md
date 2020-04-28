@@ -1,5 +1,6 @@
 ---
 iscommercial: true
+saletype: for lease
 address1: TBD Red Table Dr.
 address2: Gypsum, CO 81637
 sqft: 600 to 3,000 
