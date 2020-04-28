@@ -1,5 +1,6 @@
 ---
 iscommercial: true
+saletype: for lease
 address1: 707 Plane Street
 address2: Gypsum, CO 81637
 sqft: 1,500 to 3,000
