@@ -1,6 +1,6 @@
 ---
 iscommercial: true
-saletype: for lease
+saletype: for sale
 address1: 707 Plane St. Lot 18
 address2: Gypsum, CO 81657
 sqft: 3.319 acres
