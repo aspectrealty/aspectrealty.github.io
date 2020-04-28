@@ -6,7 +6,7 @@
 
 Properties are generated using markdown files located in the [_properties](https://github.com/aspectrealty/aspectrealty.github.io/tree/master/_properties) folder.
 
-To add a new property simply copy the contents of an existing property file and paste into a new file in this directory.  Fill out the fields and then click the 'Commit new file' button at the bottom of the page.  This will trigger the website to generate and the new property should show within 10 minutes.
+To add a new property simply copy the contents of an existing property file and paste into a new file in this directory.  Make sure that your new file name ends with the .md extension.  Fill out the fields and then click the 'Commit new file' button at the bottom of the page.  This will trigger the website to generate and the new property should show within 10 minutes.
 
 ex. property.md file:
 
