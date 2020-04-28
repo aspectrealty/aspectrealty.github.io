@@ -1,5 +1,7 @@
 ---
-iscommercial: true
+iscommerciallease: true
+iscommercialsale: false
+isresidential: false
 saletype: for lease
 address1: TBD Red Table Dr.
 address2: Gypsum, CO 81637

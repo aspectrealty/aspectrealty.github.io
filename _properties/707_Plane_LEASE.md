@@ -1,5 +1,7 @@
 ---
-iscommercial: true
+iscommerciallease: true
+iscommercialsale: false
+isresidential: false
 saletype: for lease
 address1: 707 Plane Street
 address2: Gypsum, CO 81637

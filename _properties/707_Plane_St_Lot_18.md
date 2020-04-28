@@ -1,5 +1,7 @@
 ---
-iscommercial: true
+iscommerciallease: false
+iscommercialsale: true
+isresidential: false
 saletype: for sale
 address1: 707 Plane St. Lot 18
 address2: Gypsum, CO 81657

@@ -12,8 +12,12 @@ layout: default
         </div>
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="pills-commercial-tab" data-toggle="pill" href="#pills-commercial"
-                    role="tab" aria-controls="pills-commercial" aria-selected="true">Commercial</a>
+                <a class="nav-link active" id="pills-commercial-lease-tab" data-toggle="pill" href="#pills-commercial-lease"
+                    role="tab" aria-controls="pills-commercial-lease" aria-selected="true">Commercial For Lease</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-commercial-sale-tab" data-toggle="pill" href="#pills-commercial-sale"
+                    role="tab" aria-controls="pills-commercial-sale" aria-selected="false">Commercial For Sale</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="pills-residential-tab" data-toggle="pill" href="#pills-residential" role="tab"
@@ -21,12 +25,12 @@ layout: default
             </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-commercial" role="tabpanel"
-                aria-labelledby="pills-commercial-tab">
+            <div class="tab-pane fade show active" id="pills-commercial-lease" role="tabpanel"
+                aria-labelledby="pills-commercial-lease-tab">
                 <div class="row">
 
                     {% for property in site.properties %}
-                    {% if property.iscommercial %}
+                    {% if property.iscommerciallease %}
                     <div class="col-md-4 col-sm-6 portfolio-item">
                         <div class="card">
                             <a class="portfolio-link" href="{{ property.url }}">
@@ -43,7 +47,41 @@ layout: default
                                 {% endfor %}
                             </a>
                             <div class="portfolio-caption">
-                                <h6 class="text-uppercase">{{ property.saletype }}</h4>
+                                <h6 class="text-uppercase">FOR LEASE</h4>
+                                    <p>{{ property.address1 }}</p>
+                                    <p>{{ property.address2 }}</p>
+                                    <p>{{ property.sqft }} Sq Ft</p>
+                                    <a href="{{ property.url }}">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-commercial-sale" role="tabpanel" aria-labelledby="pills-commercial-sale-tab">
+                <div class="row">
+
+                    {% for property in site.properties %}
+                    {% if property.iscommercialsale %}
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <div class="card">
+                            <a class="portfolio-link" href="{{ property.url }}">
+                                <div class="portfolio-hover">
+                                </div>
+                                {% capture ipath %}{{ property.gallery }}{% endcapture %}
+
+                                {% for image in site.static_files %}
+                                {% if image.path contains ipath %}
+                                <img class="img-fluid" src="{{ site.baseurl }}{{ image.path }}"
+                                    alt="Real Estate Image" />
+                                {% break %}
+                                {% endif %}
+                                {% endfor %}
+                            </a>
+                            <div class="portfolio-caption">
+                                <h6 class="text-uppercase">FOR SALE</h4>
                                     <p>{{ property.address1 }}</p>
                                     <p>{{ property.address2 }}</p>
                                     <p>{{ property.sqft }} Sq Ft</p>
@@ -60,7 +98,7 @@ layout: default
                 <div class="row">
 
                     {% for property in site.properties %}
-                    {% if property.iscommercial == false %}
+                    {% if property.isresidential %}
                     <div class="col-md-4 col-sm-6 portfolio-item">
                         <div class="card">
                             <a class="portfolio-link" href="{{ property.url }}">

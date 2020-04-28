@@ -1,5 +1,7 @@
 ---
-iscommercial: true
+iscommerciallease: true
+iscommercialsale: false
+isresidential: false
 saletype: for lease
 address1: 1115 Chambers Ave. Unit B101
 address2: Eagle, CO 81657

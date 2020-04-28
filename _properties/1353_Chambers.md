@@ -1,5 +1,7 @@
 ---
-iscommercial: true
+iscommerciallease: true
+iscommercialsale: false
+isresidential: false
 saletype: for lease
 address1: 1353 Chambers Ave.
 address2: Eagle, CO 81657
