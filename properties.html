@@ -10,10 +10,11 @@ layout: default
                 <h2 class="section-heading text-uppercase">Listings</h2>
             </div>
         </div>
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="pills-commercial-lease-tab" data-toggle="pill" href="#pills-commercial-lease"
-                    role="tab" aria-controls="pills-commercial-lease" aria-selected="true">Commercial For Lease</a>
+                <a class="nav-link active" id="pills-commercial-lease-tab" data-toggle="pill"
+                    href="#pills-commercial-lease" role="tab" aria-controls="pills-commercial-lease"
+                    aria-selected="true">Commercial For Lease</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="pills-commercial-sale-tab" data-toggle="pill" href="#pills-commercial-sale"
@@ -31,7 +32,7 @@ layout: default
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-commercial-lease" role="tabpanel"
                 aria-labelledby="pills-commercial-lease-tab">
-                <div class="row">
+                <div class="row justify-content-center">
 
                     {% for property in site.properties %}
                     {% if property.iscommerciallease %}
@@ -44,18 +45,18 @@ layout: default
 
                                 {% for image in site.static_files %}
                                 {% if image.path contains ipath %}
-                                <img class="img-fluid portfolio-img" src="{{ site.baseurl }}{{ image.path }}"
+                                <img class="portfolio-img" src="{{ site.baseurl }}{{ image.path }}"
                                     alt="Real Estate Image" />
                                 {% break %}
                                 {% endif %}
                                 {% endfor %}
                             </a>
                             <div class="portfolio-caption">
-                                <h6 class="text-uppercase">FOR LEASE</h4>
-                                    <p>{{ property.address1 }}</p>
-                                    <p>{{ property.address2 }}</p>
-                                    <p>{{ property.sqft }} Sq Ft</p>
-                                    <a href="{{ property.url }}">More Details</a>
+                                <h6 class="text-uppercase">FOR LEASE</h6>
+                                <p>{{ property.address1 }}</p>
+                                <p>{{ property.address2 }}</p>
+                                <p>{{ property.sqft }} Sq Ft</p>
+                                <a href="{{ property.url }}">More Details</a>
                             </div>
                         </div>
                     </div>
@@ -64,8 +65,9 @@ layout: default
 
                 </div>
             </div>
-            <div class="tab-pane fade" id="pills-commercial-sale" role="tabpanel" aria-labelledby="pills-commercial-sale-tab">
-                <div class="row">
+            <div class="tab-pane fade" id="pills-commercial-sale" role="tabpanel"
+                aria-labelledby="pills-commercial-sale-tab">
+                <div class="row justify-content-center">
 
                     {% for property in site.properties %}
                     {% if property.iscommercialsale %}
@@ -78,18 +80,18 @@ layout: default
 
                                 {% for image in site.static_files %}
                                 {% if image.path contains ipath %}
-                                <img class="img-fluid" src="{{ site.baseurl }}{{ image.path }}"
+                                <img class="portfolio-img" src="{{ site.baseurl }}{{ image.path }}"
                                     alt="Real Estate Image" />
                                 {% break %}
                                 {% endif %}
                                 {% endfor %}
                             </a>
                             <div class="portfolio-caption">
-                                <h6 class="text-uppercase">FOR SALE</h4>
-                                    <p>{{ property.address1 }}</p>
-                                    <p>{{ property.address2 }}</p>
-                                    <p>{{ property.sqft }} Sq Ft</p>
-                                    <a href="{{ property.url }}">More Details</a>
+                                <h6 class="text-uppercase">FOR SALE</h6>
+                                <p>{{ property.address1 }}</p>
+                                <p>{{ property.address2 }}</p>
+                                <p>{{ property.sqft }} Sq Ft</p>
+                                <a href="{{ property.url }}">More Details</a>
                             </div>
                         </div>
                     </div>
@@ -99,7 +101,7 @@ layout: default
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-residential" role="tabpanel" aria-labelledby="pills-residential-tab">
-                <div class="row">
+                <div class="row justify-content-center">
 
                     {% for property in site.properties %}
                     {% if property.isresidential %}
@@ -112,18 +114,18 @@ layout: default
 
                                 {% for image in site.static_files %}
                                 {% if image.path contains ipath %}
-                                <img class="img-fluid" src="{{ site.baseurl }}{{ image.path }}"
+                                <img class="portfolio-img" src="{{ site.baseurl }}{{ image.path }}"
                                     alt="Real Estate Image" />
                                 {% break %}
                                 {% endif %}
                                 {% endfor %}
                             </a>
                             <div class="portfolio-caption">
-                                <h6 class="text-uppercase">{{ property.saletype }}</h4>
-                                    <p>{{ property.address1 }}</p>
-                                    <p>{{ property.address2 }}</p>
-                                    <p>{{ property.sqft }} Sq Ft</p>
-                                    <a href="{{ property.url }}">More Details</a>
+                                <h6 class="text-uppercase">{{ property.saletype }}</h6>
+                                <p>{{ property.address1 }}</p>
+                                <p>{{ property.address2 }}</p>
+                                <p>{{ property.sqft }} Sq Ft</p>
+                                <a href="{{ property.url }}">More Details</a>
                             </div>
                         </div>
                     </div>
@@ -133,20 +135,20 @@ layout: default
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-prior" role="tabpanel" aria-labelledby="pills-prior-tab">
-                <div class="row">
+                <div class="row justify-content-center">
 
                     {% for property in site.properties %}
                     {% if property.isprior %}
                     <div class="col-md-4 col-sm-6 portfolio-item">
                         <div class="card">
-                            <div>
+                            <div class="portfolio-link">
                                 <div class="portfolio-hover">
                                 </div>
                                 {% capture ipath %}{{ property.gallery }}{% endcapture %}
 
                                 {% for image in site.static_files %}
                                 {% if image.path contains ipath %}
-                                <img class="img-fluid" src="{{ site.baseurl }}{{ image.path }}" alt="Property Image" />
+                                <img class="portfolio-img" src="{{ site.baseurl }}{{ image.path }}" alt="Property Image" />
                                 {% break %}
                                 {% endif %}
                                 {% endfor %}
