@@ -23,6 +23,10 @@ layout: default
                 <a class="nav-link" id="pills-residential-tab" data-toggle="pill" href="#pills-residential" role="tab"
                     aria-controls="pills-residential" aria-selected="false">Residential</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-prior-tab" data-toggle="pill" href="#pills-prior" role="tab"
+                    aria-controls="pills-prior" aria-selected="false">Prior Transactions</a>
+            </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-commercial-lease" role="tabpanel"
@@ -40,7 +44,7 @@ layout: default
 
                                 {% for image in site.static_files %}
                                 {% if image.path contains ipath %}
-                                <img class="img-fluid" src="{{ site.baseurl }}{{ image.path }}"
+                                <img class="img-fluid portfolio-img" src="{{ site.baseurl }}{{ image.path }}"
                                     alt="Real Estate Image" />
                                 {% break %}
                                 {% endif %}
@@ -120,6 +124,37 @@ layout: default
                                     <p>{{ property.address2 }}</p>
                                     <p>{{ property.sqft }} Sq Ft</p>
                                     <a href="{{ property.url }}">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-prior" role="tabpanel" aria-labelledby="pills-prior-tab">
+                <div class="row">
+
+                    {% for property in site.properties %}
+                    {% if property.isprior %}
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <div class="card">
+                            <div>
+                                <div class="portfolio-hover">
+                                </div>
+                                {% capture ipath %}{{ property.gallery }}{% endcapture %}
+
+                                {% for image in site.static_files %}
+                                {% if image.path contains ipath %}
+                                <img class="img-fluid" src="{{ site.baseurl }}{{ image.path }}" alt="Property Image" />
+                                {% break %}
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="portfolio-caption">
+                                <h6 class="text-uppercase">{{ property.saletype }}</h4>
+                                    <p>{{ property.saledate }}</p>
+                                    <p>{{ property.price }}</p>
                             </div>
                         </div>
                     </div>

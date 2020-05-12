@@ -6,8 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Real Estate">
-    <link rel="shortcut icon" href="{{ base.url | prepend: site.url }}/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="{{ base.url | prepend: site.url }}/img/favicon.ico" type="image/x-icon">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ base.url | prepend: site.url }}/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ base.url | prepend: site.url }}/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ base.url | prepend: site.url }}/img/favicon-16x16.png">
+    <link rel="manifest" href="{{ base.url | prepend: site.url }}/img/site.webmanifest">
 
     <title>Aspect Realty</title>
 
@@ -36,9 +39,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -47,10 +49,15 @@
                         <a class="nav-link text-right" href="{{ base.url | prepend: site.url }}/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-right" href="{{ base.url | prepend: site.url }}/properties.html">Listings</a>
+                        <a class="nav-link text-right"
+                            href="{{ base.url | prepend: site.url }}/properties.html">Listings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-right" href="{{ base.url | prepend: site.url }}/contact.html">Contact</a>
+                        <a class="nav-link text-right" href="{{ base.url | prepend: site.url }}/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-right"
+                            href="{{ base.url | prepend: site.url }}/contact.html">Contact</a>
                     </li>
                 </ul>
             </div>

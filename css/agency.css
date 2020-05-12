@@ -188,76 +188,24 @@ img::-moz-selection {
   }
 }
 
-header.masthead {
+.masthead {
   text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   color: black;
+  background-color: #84aec2;
   background-image: url("../img/header-bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  height: 100vh;
+  min-height: 600px;
 }
 
-header.masthead .intro-text {
-  padding-top: 80px;
-  padding-bottom: 120px;
-}
-
-header.masthead .intro-text .intro-heading {
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: 200;
-  margin-bottom: 5px;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-}
-
-header.masthead .intro-text .intro-heading2 {
-  font-size: 25px;
-  line-height: 25px;
-  font-weight: 100;
-  margin-bottom: 25px;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-}
-
-header.masthead .intro-text .intro-lead-in {
-  font-size: 14px;
-  line-height: 14px;
-  font-style: italic;
-  margin-bottom: 25px;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-}
-
-@media (min-width: 768px) {
-  header.masthead .intro-text {
-    padding-top: 156px;
-    padding-bottom: 170px;
-  }
-  header.masthead .intro-text .intro-heading {
-    font-size: 65px;
-    line-height: 65px;
-    font-weight: 200;
-    margin-bottom: 50px;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  }
-  header.masthead .intro-text .intro-heading2 {
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 100;
-    margin-bottom: 50px;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  }
-  header.masthead .intro-text .intro-lead-in {
-    font-size: 25px;
-    line-height: 25px;
-    font-style: italic;
-    margin-bottom: 50px;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  }
-}
-
-header.masthead.secondary {
-  background-color: #84AEC2;
-  background-image: none !important;
+.masthead .intro-text {
+  padding-top: 25vh;
 }
 
 .portfolio .portfolio-item {
@@ -268,9 +216,15 @@ header.masthead.secondary {
 .portfolio .portfolio-item .portfolio-link {
   position: relative;
   display: block;
+  height: 25vh;
   max-width: 400px;
   margin: 0 auto;
   cursor: pointer;
+}
+
+.portfolio .portfolio-item .portfolio-link .portfolio-link img {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .portfolio .portfolio-item .portfolio-link .portfolio-hover {
@@ -285,6 +239,15 @@ header.masthead.secondary {
 
 .portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
   opacity: 0.5;
+}
+
+.portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-details {
+  background-color: lightgrey;
+  color: black;
+  padding: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
 }
 
 .portfolio .portfolio-item .portfolio-caption {
@@ -314,83 +277,66 @@ header.masthead.secondary {
   }
 }
 
-.portfolio-modal .modal-dialog {
-  margin: 1rem;
-  max-width: 100vw;
+.feature .feature-item {
+  right: 0;
+  margin: 0 0 15px;
 }
 
-.portfolio-modal .modal-content {
-  padding: 100px 0;
-  text-align: center;
-}
-
-.portfolio-modal .modal-content h2 {
-  font-size: 3em;
-  margin-bottom: 15px;
-}
-
-.portfolio-modal .modal-content p {
-  margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content p.item-intro {
-  font-size: 16px;
-  font-style: italic;
-  margin: 20px 0 30px;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-}
-
-.portfolio-modal .modal-content ul.list-inline {
-  margin-top: 0;
-  margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content img {
-  margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content button {
+.feature .feature-item .feature-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
   cursor: pointer;
 }
 
-.portfolio-modal .close-modal {
+.feature .feature-item .feature-link .portfolio-link img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 50% 50%;
+  object-position: 50% 50%;
+}
+
+.feature .feature-item .feature-link .feature-hover {
   position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 75px;
-  height: 75px;
-  cursor: pointer;
-  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  opacity: 0;
+  background: rgba(83, 83, 83, 0.9);
 }
 
-.portfolio-modal .close-modal:hover {
-  opacity: 0.3;
+.feature .feature-item .feature-link .feature-hover:hover {
+  opacity: 0.8;
 }
 
-.portfolio-modal .close-modal .lr {
-  /* Safari and Chrome */
-  z-index: 1051;
-  width: 1px;
-  height: 75px;
-  margin-left: 35px;
-  /* IE 9 */
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background-color: #212529;
+.feature .feature-item .feature-link .feature-hover .feature-details {
+  background-color: lightgrey;
+  color: black;
+  padding: 1rem;
+  text-align: center;
+  height: 100%;
+  vertical-align: middle;
 }
 
-.portfolio-modal .close-modal .lr .rl {
-  /* Safari and Chrome */
-  z-index: 1052;
-  width: 1px;
-  height: 75px;
-  /* IE 9 */
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  background-color: #212529;
+.feature * {
+  z-index: 2;
+}
+
+@media (min-width: 767px) {
+  #portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
 }
 
 .slide-one-item.home-slider .owl-nav {
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+  opacity: 0;
+  visibility: hidden;
   position: absolute !important;
   top: 50% !important;
   bottom: auto !important;

@@ -14,7 +14,43 @@ layout: default-home
   </div>
 </header>
 
-<section class="page-section">
+<section class="feature page-section">
+  <div class="container">
+    <div class="row">
+      {% for property in site.properties %}
+      {% if property.isfeatured %}
+      <div class="col-md-4 col-sm-6 feature-item">
+        <div class="card">
+          <a class="feature-link" href="{{ property.url }}">
+            <div class="feature-hover">
+              <div class="feature-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+            </div>
+            {% capture ipath %}{{ property.gallery }}{% endcapture %}
+            {% for image in site.static_files %}
+            {% if image.path contains ipath %}
+            <img class="img-fluid" src="{{ site.baseurl }}{{ image.path }}" alt="Real Estate Image" />
+            {% break %}
+            {% endif %}
+            {% endfor %}
+          </a>
+          <!-- <div class="feature-caption">
+            <h6 class="text-uppercase">FOR LEASE</h4>
+              <p>{{ property.address1 }}</p>
+              <p>{{ property.address2 }}</p>
+              <p>{{ property.sqft }} Sq Ft</p>
+              <a href="{{ property.url }}">More Details</a>
+          </div> -->
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-light page-section">
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-4">
@@ -27,34 +63,6 @@ layout: default-home
           land, and multifamily properties in mountain communites. We provide high caliber services to owners,
           investors, and tenants, delivered with focused and specialized details for the unique factors that can be
           attributed with mountain resort communities. </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Team -->
-<section class="bg-light page-section" id="team">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">Broker</h2>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-sm-4">
-        <div class="team-member">
-          <!-- <img class="mx-auto rounded-circle" src="img/headshot.jpg" alt="Broker Headshot"> -->
-          <h4>Jason Fish</h4>
-          <p class="text-muted mt-1"><a href="tel://9708290577">(970) 829-0577</a></p>
-          <p class="text-muted"><a href="mailto:jfish@aspectrealtyco.com">jfish@aspectrealtyco.com</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <p class="large text-muted">Jason and his team at Aspect Realty strive to help investors identify and purchase commercial and
-          residential property as an investment vehicle in the fast growing mountain communities and resort
-          markets.</p>
       </div>
     </div>
   </div>
