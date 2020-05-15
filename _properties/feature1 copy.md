@@ -1,18 +1,17 @@
 ---
 isfeatured: true
-saletype: for lease
-address1: 1115 Chambers Ave. Unit B101
-address2: Eagle, CO 81657
-sqft: 1000
-term: 2-5 Years
-camretax: Included in Rent
-shortdesc: Office Retail, Light Industrial
+saletype: for sale
+address1: 477 Pilgrim Dr.
+address2: Edwards, CO 81632
+sqft: 7,529 on 15 acres
+Bedrooms: 7
+Bathrooms: 8
+shortdesc: Single Family Home
 agent: Jason Fish
 phone: 970-300-1415
 email: jfish@aspectrealtyco.com
-price: $17.00-$20.00 SF Annual
-shortdesc: B101 is a new commercial space in the Chambers Lofts mixed use complex in Eagle directly facing Chambers Avenue. This unit is ready for any office, retail, or warehousing tenant needs.
-desc: B101 is a new commercial space in the Chambers Lofts mixed use complex in Eagle directly facing Chambers Avenue. This unit is ready for any office, retail, or warehousing tenant needs. This space gets ample natural sunlight as it is equipped with two 10 foot glass overhead doors along with a south facing orientation. The unit was configured to maximize functional use without compromising an aesthetically pleasing storefront, which directly addresses Chambers Avenue. This particular has access to a private patio for outside seating or additional displays and is fully stubbed for water, gas and electric. Call for more details regarding landlord fit out incentives to make this space fit any of your operational needs.
-mapurl: https://www.google.com/maps/embed/v1/place?key=AIzaSyBxhIcjBcpDa3pzvGqgMLnSgZDusFYQci4&q=1115+Chambers+Ave,+Eagle,+CO+81631
-gallery: property2
+price: $3,395,000
+desc: Breathtaking log home located on Pilgrim Down's premiere 15 acre site offering Gore Range views within the seclusion of a gated community while being only minutes from Edwards. Separate guest/caretaker home with complete horse stables and pasture. This unique property offers a babbling brook, hiking trails and peaceful aspen groves in a setting that must be seen to believe. Uniquely Colorado in every way this tranquil mountain setting should not be overlooked.
+mapurl: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.1995466415233!2d-106.62512768579784!3d39.60018711281845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8741d9fa1edcadbd%3A0x1e59da373fe79732!2s477%20Pilgrim%20Dr%2C%20Edwards%2C%20CO%2081632!5e0!3m2!1sen!2sus!4v1588117016363!5m2!1sen!2sus
+gallery: 477_Pilgrim
 ---
