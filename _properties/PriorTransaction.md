@@ -1,5 +1,5 @@
 ---
-isprior: true
+isprior: false
 saletype: sold
 saledate: 5/11/2020
 address1: 477 Pilgrim Dr.
